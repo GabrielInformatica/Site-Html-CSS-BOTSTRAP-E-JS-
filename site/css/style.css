@@ -1,0 +1,60 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.navbar-a{
+	font-size: 30px;
+	font-family: 'Abril Fatface', cursive;
+}
+.title{
+	text-align: center;
+}
+.carouselExampleSlidesOnly{
+	max-width: 50%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 0 3px 4px rgba(2, 6, 7, 0.5);	
+}
+#carouselExampleFade{
+	max-width: 50%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 0 3px 4px rgba(2, 6, 7, 0.5);	
+}
+.contatos{
+	max-width: 50%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 0 3px 4px rgba(2, 6, 7, 0.5);	
+
+}
+.carouselExampleSlidesOnly2{
+	max-width: 30%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 0 3px 4px rgba(2, 6, 7, 0.5);	
+	
+}
+.text-index {
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+

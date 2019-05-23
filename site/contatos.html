@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="./css/style.css">
+	 <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!--FontAwesome-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<!--FontAwesome-->
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!--Bootstrap-->
+
+	<link rel="shortcut icon" type="image/x-icon" href="./images/1.jpg" />
+	<title>Saúde</title>
+	
+  </head>
+  <body>
+		<nav class="navbar navbar-light bg-dark">	
+				<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="fas fa-align-justify"> Menu</i>
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<a class="dropdown-item" href="index.html"> <i class="fas fa-info"></i> Inicio</a>
+					<a class="dropdown-item" href="imagens.html"> <i class="fas fa-wallet"></i> Imagens</a>
+					<a class="dropdown-item" href="saudeNaTI.html"> <i class="fas fa-laptop-code"></i> Saúde na TI</a>
+					<a class="dropdown-item" href="contatos.html"> <i class="fas fa-headset"></i> Contato</a>
+				</div>
+	<a class="navbar-a" >
+		<img src="./images/1.jpg" width="70" height="50" >
+		<font color="red" > SaúdeWeb </font>
+	</a>
+</nav>
+	<div class="title">
+		<h1>Contatos</h1>   
+	</div>
+	<div class="carouselExampleSlidesOnly2" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="./images/cont.jpg" class="d-block w-100">
+			</div>
+		</div>
+	</div>
+	<div>
+		<hr>
+		<form name="dados" onSubmit="return enviardados();" method="GET" >
+				<h2>Envie sua Mensagem</h2>
+				  <div>
+					<label>Nome:</label>
+					<div >
+					  <input name="tx_nome" type="text" class="formbutton" id="tx_nome" size="52" maxlength="150">
+					</div>
+					</div>
+				  <div>
+					<label>Email:</label>
+					<div>
+					  <input name="tx_email" type="text" id="tx_email" size="52" maxlength="150" class="formbutton">
+					</div>
+				</div>
+				  <div>
+					<label >Mensagem:</label>
+					<div>
+					  <textarea name="tx_mensagem" cols="50" rows="8" class="formbutton" id="tx_mensagem" input ></textarea>
+					</div>
+				<div class="form-group">
+					<label for="exampleFormControlFile1">Enviar uma imagem:</label>
+					<input type="file" class="form-control-file" id="exampleFormControlFile1">
+				</div>
+				</div>
+					  <input name="Submit" type="submit"  class="btn btn-primary mb-2" >
+				
+					  <input name="Reset" type="reset" class="btn btn-primary mb-2" value="Redefinir">
+				
+			  </form> 
+		<hr>
+	</div>
+
+	<script language="JavaScript" >
+			function enviardados(){
+			  
+			if(document.dados.tx_nome.value=="" || document.dados.tx_nome.value.length < 8)
+			{
+			alert( "Preencha campo NOME corretamente!" );
+			document.dados.tx_nome.focus();
+			return false;
+			}
+			  
+			  
+			if( document.dados.tx_email.value=="" || document.dados.tx_email.value.indexOf('@')==-1 || document.dados.tx_email.value.indexOf('.')==-1 )
+			{
+			alert( "Preencha campo E-MAIL corretamente!" );
+			document.dados.tx_email.focus();
+			return false;
+			}
+			  
+			if (document.dados.tx_mensagem.value=="")
+			{
+			alert( "Preencha o campo MENSAGEM!" );
+			document.dados.tx_mensagem.focus();
+			return false;
+			}
+			  
+			if (document.dados.tx_mensagem.value.length < 30 )
+			{
+			alert( "É necessario preencher o campo MENSAGEM com mais de 50 caracteres!" );
+			document.dados.tx_mensagem.focus();
+			return false;
+			}
+			  
+			return  alert("Dados enviados com sucesso")
+			}
+			  
+			</script>
+    
+  </body>
+</html>
